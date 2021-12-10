@@ -1,0 +1,69 @@
+
+/********************** Media Query *********************/
+@media (max-width: 850px){
+    .content{
+    grid-template-columns: 1fr 1fr;
+    }
+
+    .banner-proyecto img{
+        height: 100%;
+        width: 150%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 620px){
+    .content{
+    grid-template-columns: 1fr;
+    }
+
+    h2{
+        text-align: center;
+        display: block;
+    }
+
+    h2:after {
+        display: none !important;
+  }
+
+/* ****************** MEDIA ABOUT */
+  .about-grid{
+       grid-template-areas: 
+    'about-left'
+    'about-content'
+    'about-content-dos'
+    'about-left-dos' 
+    }
+    .about-left {
+        width: 60vw;
+        align-items: center;
+        margin: 150PX AUTO 20PX AUTO;
+    }
+    .about-content {
+        width: 65vw;
+        margin: auto;
+    }
+    .about-content-dos {
+        width: 65vw;
+    }
+
+
+/* ****************** MEDIA Proyectos */
+.banner-proyecto{
+    margin-top:180px;
+    height:40vh ;
+}
+
+.banner-proyecto img{
+    height: 100%;
+    width: 150%;
+    background-size: cover;
+    background-position: center;
+}
+.texto-imagen{
+    top: 60px;
+  
+  
+  }
+  
+}
