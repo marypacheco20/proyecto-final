@@ -15,6 +15,8 @@
      <!------------ FONTS  -------------------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,400;1,500&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,600;1,700&display=swap" rel="stylesheet">
    <!------------ FAVICON  -------------------------------------->
    <link rel="shortcut icon" href="../public/img/mary_pacheco_favicon.png" type="image/x-icon">
@@ -22,7 +24,7 @@
 
     <title>Mary Pacheco | Proyectos </title>
 </head>
-<body> 
+<body class="fondo"> 
 
     <!------------NAVEGACIÓN -->
 
@@ -34,7 +36,7 @@
                     <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
                         <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="../index.html">Inicio</a></li>
                         <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="about.html">Sobre mí</a></li>
-                        <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="proyectos.html">Proyectos</a></li>
+                        <li class="nav-item px-3 px-xl-4"><a class="nav-link menu-activo fw-medium" href="proyectos.html">Proyectos</a></li>
                         <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="market.html">Tienda</a></li>
                         <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="contacto.html">Contacto</a></li>
                     </ul>
@@ -45,63 +47,103 @@
         
 
     <main>
-        <div"> 
-            <DIV class="banner-proyecto"> 
-                
-                <img src="../public/img/proyecto_banner.jpg" alt=""> 
-                <div class="texto-imagen" > <h3 > INTRANET IDAT / PACHAQTEC</h3>
-                    <p>Aquí va una pequeña descripción</p>
-                
-            </DIV>
-            
-        </div> 
 
-        <div class="proyecto-content">
-            <div class="proyecto-izquierda"> <strong>Antecedentes de Proyecto</strong>  </div>
-            <div>  En este proyecto fui la dupla de la Diseñadora UX Sr, junto a ella pude aprender y diseñar el prototipo para la Intranet de Idat-PachaQtec. Desarrollamos desde la Arquitectura de Información hasta la Evaluación de Usabilidad en un lapso de 2.5 meses. 
-            <br> El objetivo de la intranet era hacer un acompañamiento a los docentes en esta época digital,  facilitando su labor para el ingreso de notas, toma de asistencia, tareas a alumnos, realizar trámites, revisar sus propias evaluciones de desempeño y estar mejor conectado con una comunidad interna.
-            </div>
+     <!-- -----------------   BANNER -->
+    <div class="case-study"> 
+        <h1 class="h1-interna"> 
+        INTRANET IDAT / PACHAQTEC</h1>
+        <p class="bajada">Wireframe de Intranet para profesores diseñado en versión web y móvil.</p>
+    </div>  
+
+    <figure class="case-img"> <img class="img-fluid w-100" src="../public/img/proyecto1_destacado.jpg" alt=""></figure> 
+ 
+
+<!--      <section id="hero-proyecto">
+        <div class="hero-container">
+            <div class="jumbotron-caption d-md-block">
+                <h3>INTRANET IDAT / PACHAQTEC</h3>
+                <p class="bajada">Wireframe de Intranet para profesores diseñado en versión web y móvil.</p>
+    
+            </div> 
         </div>
 
-        <div class="proyecto-content">
-            <div class="proyecto-izquierda"> <strong>Desafío</strong>  </div>
-            <div> <strong> Integrar todas las plataformas de distintos servicios en una Intranet. </strong>
-                <br> 
-                El principal reto de la intranet fue plantear una Arquitectura de Información que incluya todas las funcionalidades que el grupo i-Learning las tenía enlazadas a diferentes plataformas: Zoom, Moodle, Smart.
-                <br> Para resolver el desafío nos enfocamos en ordenar y estructurar la información para luego hacer espacio a las nuevas funcionalidades que querían agregar sobre networking, por ejemplo.
-                <br>Este proyecto fue el más grande y completo en el que pude participar. Tuvo cuatro iteraciones con cliente, incluyendo la revisión post-prueba de usabilidad.
-                
+    </section> -->
+     
 
+     <!-- -----------------   CONTENIDO-->
+        <div class="proyecto">
+            <h4 class="h4-purple">Antecedentes de Proyecto  </h4>
+            <div>  En este proyecto fui la diseñadora de la Product Designer, junto a ella pude aprender y diseñar el prototipo de la Intranet de Idat-PachaQtec. Desarrollamos desde la Arquitectura de Información hasta la Evaluación de Usabilidad en un lapso de 2.5 meses. 
             </div>
+          <p> <strong class="cursiva"> <br> El objetivo de la intranet era hacer un acompañamiento a los docentes en esta época digital, </strong> facilitando su labor para el ingreso de notas, toma de asistencia, tareas a alumnos, realizar trámites, revisar sus propias evaluciones de desempeño y estar mejor conectado con una comunidad interna. </p>      
+            <p>   <strong class="cursiva"> Métodos y herramientas </strong> </p>
+            <p>    Gantt Chart, User persona, Arquitectura de Información, Prototipo en Axure, Test de Usabilidad. </p>
+        </div>
+      
+        <div class="proyecto">
+            <h4 class="h4-purple"> Desafío </h4>
+            <strong class="cursiva"> Integrar todas las plataformas de distintos servicios en una Intranet. </strong>
+            <br> 
+            El principal reto de la intranet fue plantear una Arquitectura de Información que incluya todas las funcionalidades que el grupo i-Learning las tenía enlazadas a diferentes plataformas: Zoom, Moodle, Smart.
+            <br> Para resolver el desafío nos enfocamos en ordenar y estructurar la información para luego hacer espacio a las nuevas funcionalidades que querían agregar sobre networking, por ejemplo.
+            <br>Este proyecto fue el más grande y completo en el que pude participar. Tuvo cuatro iteraciones con cliente, incluyendo la revisión post-prueba de usabilidad.
         </div>
         
-        <div class="proyecto-content">
-            <div class="proyecto-izquierda"> <strong>Producto</strong>  </div>
-            <div> 
-
-                
-                El diseño del wireframe fue realizado en Axure, por la enorme ventaja de poder trabajar una aplicación de desktop y móvil al mismo tiempo; además de que el flujo es más organizado y la creación del prototipo sería más eficiente.  
+        <div class="proyecto">
+            <h4 class="h4-purple"> User Persona</h4>
+            Realizamos la arquitectura de información de todo el sitio en base a los objetivos que necesitaba el stakeholder. 
             <br>
-                Fueron en total 55 vistas desarrolladas en versión desktop y móvil; además de la versión administrador de cada página.
-                <p>
-                    <figure> <img src="../public/img/proyecto_miniatuta.jpg" alt="">  </figure>
-                <a href="proyectos-interna.html" class="border-button" > Ver prototipo </a>
-            </div>
-            <p>
+             <p> <figure> <img src="../public/img/proyecto1_user.png" alt="User Persona"  class="img-fluid">  </figure>
             
         </div>
-        <div class="proyecto-content">
-            <div class="proyecto-izquierda"> <strong>Conclusionesy Reflexiones</strong>  </div>
-            <div> Personalmente, este proyecto me retó a aplicar todos mis conocimientos de UX. Tuve que aprender a utilizar Axure, una plataforma que no había utilizado nunca antes, en tiempo record, y tuve que empezar a pensar como el usuario, imaginándome en cada situación.Además de alinear los objetivos del negocio a la intranet. También experimenté la importancia del feedback, ya que con las 4 iteraciones que tuvimos con el cliente fuimos revisando información faltante y necesaria.  
+
+        <div class="proyecto">
+            <h4 class="h4-purple"> Arquitectura de información</h4>
+            Realizamos la arquitectura de información de todo el sitio en base a los objetivos que necesitaba el stakeholder. 
             <br>
-                Y la mejor parte fue trabajar en equipo con una experimentada Uxer que me dio la mano durante todo el proceso. Fue enriquecedor.
+             <p> <figure> <img src="../public/img/proyecto1_arq.png" alt="Arquitectura de información del proyect"  class=" img-fluid">  </figure>
+                <a href="https://docs.google.com/spreadsheets/d/1WCsLlU4PJ0MwN1qliT5L-Onufc75RfkT/edit?usp=sharing&ouid=110297659647529817993&rtpof=true&sd=true" class="boton efecto" target="blank" >  <span> Ver toda la arquitectura </span>  </a>      
+        </div>
+
+        <div class="proyecto">
+            <h4 class="h4-purple"> Producto </h4>
+            El diseño del wireframe fue realizado en Axure, por la enorme ventaja de poder trabajar una aplicación de desktop y móvil al mismo tiempo; además de que el flujo es más organizado y la creación del prototipo sería más eficiente.  
+            <br>
+            <strong class="cursiva">   Fueron en total 55 vistas desarrolladas en versión desktop y móvil; además de la versión administrador de cada página. </strong>
+                <p>
+                    <figure> <img src="../public/img/proyecto_miniatuta.jpg" alt=""  class=" img-fluid">  </figure>
+                <a href="https://jz8v08.axshare.com/#g=1&p=feed" class="boton efecto" target="blank" > <span> Ver prototipo</span> </a>        </div>
+        </div>
+        <div class="proyecto">
+            <h4 class="h4-purple"> Prueba de usabilidad </h4>
+
+            Para finalizar nuestro proceso realizamos una prueba de usabilidad sumativa remota con el fin de probar la facilidad de uso (navegación, patrones de navegación), contenido (comprensión, contenido faltante) y arquitectura de la información de la intranet en su versión responsive.
+            Para la aplicación de la prueba se hizo un cuestionario, User testing / Think aloud con grabación de pantallas y Card sorting
+            <p> Algunos de los resultados fueron:
+                <ul> 
+                    <li>     — Navegación: Realizar un reordenamiento de la navegación según relevancia de tareas para docentes. </li>
+                    <li>     — Procurar llegar máximo a un 3er nivel de navegación  </li>
+                    <li>     — Utilizar los terminos: docentes, alumnos, colegas, calificaciones, políticas </li>
+                    <li>     — Utilizar tiempos verbales menos formales. Ejemplo:  “Contáctenos” </li>
+                    <li>     — Cambiar el formato de contacto a tarjetas y colocarlo dentro de soporte docente. </li>
+                    <li>     —  Añadir una guía de procesos para las solicitudes y/o crear una lista de preguntas frecuentas en relación a los procesos sea docente o alumno.
+                        Entre otros.  </li>
+
+                 </ul>
+            </p> 
+
+        </div>
+      
+
+        <div class="proyecto">
+            <h4 class="h4-purple"> Conclusiones y Reflexiones</h4>
+            Personalmente, este proyecto me retó a aplicar todos mis conocimientos de UX. Tuve que aprender a utilizar Axure, una plataforma que no había utilizado nunca antes, en tiempo record, y tuve que empezar a pensar como el usuario, imaginándome en cada situación. Además de alinear los objetivos del negocio a la intranet. También experimenté la importancia del feedback, ya que con las 4 iteraciones que tuvimos con el cliente fuimos revisando información faltante y necesaria.  
+            <br>
+            <strong class="cursiva">   Y la mejor parte fue trabajar en equipo con una experimentada Uxer que me dio la mano durante todo el proceso. Fue enriquecedor.</strong>
                 <br>              
                 Por último, con la prueba de usabilidad, notamos que la arquitectura de información fue aceptada a grandes rasgos y los cambios que más son necesarios de hacer son de UX Writing. Para cerrar el proyecto se decidió aplicar los cambios más importantes que no implicaban rediseñor, como algunos botones, textos y títulos que causaban confusión; y dejar otros pedidos para una siguiente iteración; por ejemplo, incluir un chatbot o visualizar el conteo de horas y remuneración por hora, sobretodo por casos de eventos curriculares.
-          
-
-
-            </div>
         </div>
+
     </main>
 
 

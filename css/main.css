@@ -20,6 +20,11 @@
   color: #ffffff;
   background: linear-gradient(45deg, #BAA4CF, #DED7E1); }
 
+/* $purple-main: #BAA4CF;
+$purple-light: #DED7E1;
+$dark-purple: #221d24;
+$super-white:#FFF;
+$gradient: linear-gradient(45deg, #BAA4CF, #DED7E1); */
 /********************** Media Query *********************/
 @media (max-width: 850px) {
   .content {
@@ -62,19 +67,21 @@
     top: 60px; } }
 
 body {
-  background-color: #F5F5F5;
+  background-color: #ffffff;
   font-family: 'Goudy Bookletter 1911', serif;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  background-image: url("../public/img/bg_marypacheco.jpg");
+  background-image: url("");
   background-attachment: fixed; }
 
+.fondo {
+  background-color: #eef4e8; }
+
 h1 {
-  background: linear-gradient(45deg, #BAA4CF, #DED7E1);
-  -webkit-background-clip: text;
+  font-family: 'Goudy Bookletter 1911', serif;
   background-clip: text;
-  color: transparent;
-  font-size: 2.5em; }
+  color: #384b0f;
+  font-size: 4em; }
 
 .h1-especial {
   font-family: 'Goudy Bookletter 1911', serif;
@@ -82,6 +89,15 @@ h1 {
   color: #FFF;
   letter-spacing: 1px;
   font-weight: 100; }
+
+.h1-interna {
+  font-family: 'Goudy Bookletter 1911', serif;
+  color: #384b0f;
+  font-size: 3em;
+  letter-spacing: 1px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 1em; }
 
 h2 {
   font-size: 2em;
@@ -100,7 +116,21 @@ h4 {
   color: #221d24;
   font-size: 1.2em;
   font-family: 'Eb Garamond';
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+
+.h4-purple {
+  color: #384b0f;
+  font-size: 1.2em;
+  font-family: 'Montserrat';
   font-weight: 600; }
+
+.cursiva {
+  font-family: 'Eb Garamond', serif;
+  font-size: 1.25em;
+  text-transform: none; }
 
 h2:after {
   content: "";
@@ -120,21 +150,15 @@ h2:after {
   width: 95%;
   margin: 0 auto; }
 
-.header {
-  list-style: none;
-  padding: 0;
-  background-color: #FFF;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100; }
+.princ-parrafo {
+  padding-bottom: 20px;
+  margin-bottom: 20px; }
 
 .tienda {
   margin: auto;
   align-items: center;
   padding: 35px;
-  border: solid #DED7E1 5px;
+  border: solid #bfc79c 5px;
   background-color: #ffffff; }
   .tienda li {
     list-style: square; }
@@ -143,12 +167,12 @@ h2:after {
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
       font-size: 12px;
-      color: #BAA4CF;
+      color: #384b0f;
       text-transform: uppercase;
       letter-spacing: 1px; }
 
 footer {
-  background: linear-gradient(45deg, #BAA4CF, #DED7E1);
+  background: linear-gradient(25deg, #384b0f, #bfc79c);
   font-size: 0.8em;
   color: white;
   bottom: 0;
@@ -163,24 +187,73 @@ footer {
   .div-footer a {
     padding: 0 20px 0 0; }
 
-.border-button {
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 40px;
+  background: #384b0f;
+  color: #fff;
   font-family: 'Montserrat';
-  font-weight: 600;
+  text-decoration: none;
+  font-weight: 400;
   font-size: 12px;
   letter-spacing: 1px;
-  border-radius: 14px;
-  border: 1.8px solid #BAA4CF;
   padding: 8px;
-  text-decoration: none;
-  width: fit-content;
-  color: #BAA4CF;
-  text-align: left;
-  text-transform: uppercase; }
-  .border-button:hover {
-    color: #ffffff;
-    background: linear-gradient(45deg, #BAA4CF, #DED7E1);
-    border: none; }
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .3s ease all;
+  border-radius: 0px;
+  position: relative;
+  overflow: hidden; }
 
+.boton span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  transition: .3s ease all; }
+
+.boton.efecto::after {
+  content: "";
+  width: 100%;
+  height: 300px;
+  color: #000000;
+  text-decoration: none;
+  background: #88a151;
+  position: absolute;
+  z-index: 1;
+  top: -300px;
+  left: 0;
+  transition: .4s ease-in-out all;
+  border-radius: 0px 0px 300px 300px; }
+
+.boton.efecto:hover::after {
+  top: 0;
+  color: #000000; }
+
+/* .border-button{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: $media/2.5 ;
+    border: 1.8px solid $purple-main;
+    padding: 8px;
+    text-decoration: none;
+    width: fit-content;
+    color: $purple-main; 
+    text-align: left;
+    text-transform: uppercase;
+    z-index: 5;
+
+    &:hover{
+        color: #ffffff;
+        background: $gradient;
+        border: none;
+    } 
+
+} */
 .div-main-padre {
   display: flex;
   flex-flow: row wrap;
@@ -246,15 +319,15 @@ footer {
   margin: auto; }
 
 .post {
-  box-shadow: 0 1px 5px 0px #b8b2bd;
+  box-shadow: 0 1px 20px 2px #eef4e8;
   transition: .2s;
-  border-radius: 20px;
+  border-radius: 0px;
   overflow: hidden;
   margin: 25px;
-  background: #FFF; }
+  background: #eef4e8; }
   .post:hover {
     transform: translateY(-4px);
-    box-shadow: 0 2px 8px 2px #b8b2bd; }
+    box-shadow: 0 2px 8px 2px #b4bdb2; }
   .post a {
     text-decoration: none; }
 
@@ -280,6 +353,30 @@ footer {
 
 .post-img-3 {
   background: url(../public/img/proyecto_3.jpg);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: .2s; }
+
+.post-img-4 {
+  background: url(../public/img/proyecto4_miniatura.png);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: .2s; }
+
+.post-img-5 {
+  background: url(../public/img/proyecto5_miniatura.png);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: .2s; }
+
+.post-img-6 {
+  background: url(../public/img/proyecto6_miniatura.png);
   width: 100%;
   height: 200px;
   background-size: cover;
@@ -437,7 +534,7 @@ table td:first-child {
   opacity: 1; }
 
 .card.product-wap a {
-  color: #BAA4CF;
+  color: #384b0f;
   font-size: 1.2em; }
 
 #carousel-related-product .slick-slide:focus {
@@ -447,17 +544,69 @@ table td:first-child {
   font-size: 15px;
   margin-top: 20px; }
 
+.bajada {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 1.5em;
+  text-align: center; }
+
+.proyecto {
+  width: 80vw;
+  background-color: #ffffff;
+  padding: 30px 40px 40px;
+  margin: 30px auto;
+  align-items: center; }
+  .proyecto li {
+    list-style: none; }
+
+.case-study {
+  width: 80vw;
+  margin: 10vh auto 50px auto; }
+
+.case-img {
+  width: 100vw;
+  max-height: 60vh;
+  overflow: hidden; }
+
 .menu-activo {
-  color: #BAA4CF !important; }
+  color: #88a151 !important; }
+
+#hero {
+  width: 100%;
+  height: 80vh;
+  background: url("../public/img/home_banner.png") no-repeat center/cover; }
+
+#hero-proyecto {
+  width: 100%;
+  height: 60vh;
+  background: url("../public/img/proyecto_banner.jpg") no-repeat center/cover; }
+
+.hero-container {
+  width: 25vw;
+  height: 100%;
+  color: #221d24;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10%; }
 
 /********************** Media Query *********************/
+@media (max-width: 1050px) {
+  .content {
+    grid-template-columns: 1fr 1fr; } }
+
 @media (max-width: 800px) {
   .content {
     grid-template-columns: 1fr 1fr; }
   .banner-proyecto img {
     height: 100%;
     width: 150%;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .hero-container {
+    width: 40vw; }
+  #hero-proyecto {
+    height: 50vh;
+    background: url("../public/img/proyecto_banner.jpg") no-repeat contain; } }
 
 @media (max-width: 620px) {
   .content {
@@ -490,3 +639,7 @@ table td:first-child {
       background-position: center; }
   .texto-imagen {
     top: 60px; } }
+
+::selection {
+  background: #363031;
+  color: #fff; }

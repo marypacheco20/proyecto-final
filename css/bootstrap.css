@@ -3070,18 +3070,18 @@ textarea.form-control-lg {
 
 .btn-success {
   color: #fff;
-  background-color: #BAA4CF;
-  border-color: #BAA4CF;
+  background-color: #384b0f;
+  border-color: #384b0f;
 }
 .btn-success:hover {
   color: #fff;
-  background-color: #9a89ab;
-  border-color: #9a89ab;
+  background-color: #88a151;
+  border-color: #88a151;
 }
 .btn-check:focus + .btn-success, .btn-success:focus {
   color: #fff;
-  background-color: #9a89ab;
-  border-color: #9a89ab;
+  background-color: #88a151;
+  border-color: #88a151;
   box-shadow: 0 0 0 0.25rem rgba(60, 153, 110, 0.5);
 }
 .btn-check:checked + .btn-success, .btn-check:active + .btn-success, .btn-success:active, .btn-success.active, .show > .btn-success.dropdown-toggle {
@@ -3994,11 +3994,7 @@ textarea.form-control-lg {
   border: 1.8px solid #BAA4CF;
   color: #BAA4CF; }
 
-/* .menu li a:hover {
-  color: #ffffff;
-  background: linear-gradient(45deg, #BAA4CF, #DED7E1); }
 
- */
 .nav-justified > .nav-link,
 .nav-justified .nav-item {
   flex-basis: 0;
@@ -4008,9 +4004,7 @@ textarea.form-control-lg {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-radius: 20px;
-  border: 1.8px solid #BAA4CF;
-  color: #BAA4CF; 
+    font-family: 'Goudy Bookletter 1911', serif;
 }
 
 .nav-fill .nav-item .nav-link,
@@ -4034,7 +4028,7 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background-color: #FFF;
+  background-color: #eef4e8;
 
 }
 .navbar > .container,
@@ -4080,7 +4074,7 @@ textarea.form-control-lg {
 
 
 .navbar-nav:hover .nav-link:hover {
-  color: #BAA4CF !important; 
+  color: #88a151 !important; 
 
 }
 .navbar-nav .dropdown-menu {
@@ -4134,9 +4128,6 @@ textarea.form-control-lg {
 .navbar-nav-scroll {
   max-height: var(--bs-scroll-height, 75vh);
   overflow-y: auto;
-}
-.menu-activo{
-  color: #BAA4CF !important;
 }
 
 @media (min-width: 576px) {
@@ -4252,7 +4243,7 @@ textarea.form-control-lg {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    background-color: #FFF;
+    background-color: #eef4e8;
   }
   .navbar-expand-lg .navbar-nav {
     -webkit-box-orient: horizontal;
@@ -6000,7 +5991,9 @@ textarea.form-control-lg {
   position: relative;
   width: 100%;
   overflow: hidden;
+
 }
+
 .carousel-inner::after {
   display: block;
   clear: both;
@@ -6070,13 +6063,13 @@ textarea.form-control-lg {
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 15%;
+  height: 80%;
   padding: 0;
-  color: #fff;
+  color: #221d24;
   text-align: center;
   background: none;
   border: 0;
@@ -6092,7 +6085,7 @@ textarea.form-control-lg {
 .carousel-control-prev:hover, .carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
-  color: #fff;
+  color: #221d24;
   text-decoration: none;
   outline: 0;
   opacity: 0.9;
@@ -6156,7 +6149,7 @@ textarea.form-control-lg {
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #221d24;
   background-clip: padding-box;
   border: 0;
   border-top: 10px solid transparent;
@@ -6175,13 +6168,11 @@ textarea.form-control-lg {
 
 .carousel-caption {
   position: absolute;
-  right: 15%;
-  bottom: 1.25rem;
-  left: 15%;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  color: #fff;
-  text-align: center;
+  top:20vh;
+  left: 10%;
+  width: 20vw;
+    color: #221d24;;
+  text-align: left;
 }
 
 .carousel-dark .carousel-control-prev-icon,
@@ -6194,6 +6185,8 @@ textarea.form-control-lg {
 .carousel-dark .carousel-caption {
   color: #000;
 }
+
+
 
 @-webkit-keyframes spinner-border {
   to {
@@ -11378,5 +11371,10 @@ textarea.form-control-lg {
   right: 0;
   left: 0;
   z-index: 1030;
+}
+
+.jumbotron{
+  padding:10vh;
+  height: 90vh;
 }
 
