@@ -127,6 +127,12 @@ h4 {
   font-family: 'Montserrat';
   font-weight: 600; }
 
+h5 {
+  color: #384b0f;
+  font-size: 1.2em;
+  font-family: 'Montserrat';
+  font-weight: 600; }
+
 .cursiva {
   font-family: 'Eb Garamond', serif;
   font-size: 1.25em;
@@ -183,7 +189,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20px; }
+  padding-left: 20px;
+  width: 100%; }
   .div-footer a {
     padding: 0 20px 0 0; }
 
@@ -408,31 +415,41 @@ footer {
   margin-top: 120px; }
 
 .about-grid {
-  margin: 0 auto;
+  margin: 10vh auto;
+  width: 80vw;
   display: grid;
   grid-template-columns: 2fr 4fr;
   grid-gap: 3vw;
-  grid-template-areas: 'about-left about-content' 'about-left-dos about-content-dos'; }
+  grid-template-areas: 'about-left about-main' 'about-left about-content' 'about-left-dos about-content-dos'; }
 
 .about-left {
   grid-area: about-left;
-  width: 20vw;
-  margin: 120px AUTO 20px auto;
+  width: 24vw;
+  height: fit-content;
+  padding: 24px;
   text-align: center;
-  font-weight: 700; }
+  font-weight: 500;
+  background-color: #ffffff; }
+
+.about-main {
+  grid-area: about-main;
+  width: 50vw;
+  padding: 24px 40px;
+  background-color: #ffffff; }
 
 .about-content {
   grid-area: about-content;
   width: 50vw;
   background-color: #ffffff;
-  padding: 10px 40px 40px;
-  margin: 120px 40px 20px;
+  padding: 24px 40px;
   align-items: center; }
 
 .about-left-dos {
   grid-area: about-left-dos;
-  margin-left: 5vw;
-  width: 20vw; }
+  width: 24vw;
+  height: fit-content;
+  padding: 24px;
+  background-color: #ffffff; }
   .about-left-dos ol {
     list-style: none; }
 
@@ -440,8 +457,7 @@ footer {
   grid-area: about-content-dos;
   width: 50vw;
   background-color: #ffffff;
-  padding: 10px 40px;
-  margin: 20px 40px; }
+  padding: 24px 40px; }
   .about-content-dos ol {
     list-style: none; }
 
@@ -557,6 +573,9 @@ table td:first-child {
   align-items: center; }
   .proyecto li {
     list-style: none; }
+  .proyecto img {
+    display: block;
+    margin: 0 auto; }
 
 .case-study {
   width: 80vw;
@@ -590,6 +609,14 @@ table td:first-child {
   justify-content: center;
   margin: 0 10%; }
 
+.scroll-container {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5px 70px 5px 20px;
+  background: transparent;
+  height: 100%;
+  border-radius: 15px; }
+
 /********************** Media Query *********************/
 @media (max-width: 1050px) {
   .content {
@@ -606,7 +633,28 @@ table td:first-child {
     width: 40vw; }
   #hero-proyecto {
     height: 50vh;
-    background: url("../public/img/proyecto_banner.jpg") no-repeat contain; } }
+    background: url("../public/img/proyecto_banner.jpg") no-repeat contain; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'about-left' 'about-main' 'about-content' 'about-content-dos' 'about-left-dos'; }
+  .about-left {
+    width: 80vw;
+    margin: 0 auto; }
+  .about-main {
+    width: 80vw;
+    margin: 0 auto; }
+  .about-content {
+    width: 80vw;
+    margin: 0 auto; }
+  .about-left-dos {
+    width: 80vw;
+    margin: 0 auto; }
+  .about-content-dos {
+    width: 80vw;
+    margin: 0 auto; }
+  table td:first-child {
+    width: 72vw; } }
 
 @media (max-width: 620px) {
   .content {
@@ -617,17 +665,6 @@ table td:first-child {
   h2:after {
     display: none !important; }
   /* ****************** MEDIA ABOUT */
-  .about-grid {
-    grid-template-areas: 'about-left' 'about-content' 'about-content-dos' 'about-left-dos'; }
-  .about-left {
-    width: 60vw;
-    align-items: center;
-    margin: 150PX AUTO 20PX AUTO; }
-  .about-content {
-    width: 65vw;
-    margin: auto; }
-  .about-content-dos {
-    width: 65vw; }
   /* ****************** MEDIA Proyectos */
   .banner-proyecto {
     margin-top: 180px;
@@ -643,3 +680,21 @@ table td:first-child {
 ::selection {
   background: #363031;
   color: #fff; }
+
+/* Scrollbar*/
+::-webkit-scrollbar {
+  width: 15px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #bfc79c; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #384b0f;
+  width: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #eef4e8;
+  width: 10px; }

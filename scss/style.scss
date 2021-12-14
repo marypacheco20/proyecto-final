@@ -90,6 +90,13 @@ h4{
     
 }
 
+h5{
+    color: $purple-main;
+    font-size: 1.2em;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    
+}
 .cursiva{
     font-family: 'Eb Garamond', serif;
     font-size: 1.25em;
@@ -162,6 +169,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding-left: 20px;
+    width: 100%;
     a
     {
         padding: 0 20px 0 0;
@@ -444,40 +452,49 @@ footer{
 } 
 
 .about-grid{
- margin: 0 auto;
+ margin: 10vh auto;
+ width: 80vw;
     display: grid;
     grid-template-columns: 2fr 4fr;
     grid-gap: 3vw; 
     grid-template-areas: 
+    'about-left about-main'
     'about-left about-content'
     'about-left-dos about-content-dos'
-    
-
 }
         
 .about-left{
     grid-area: about-left;
-    width: 20vw;
-    margin: 120px AUTO 20px auto;
+    width: 24vw;
+    height: fit-content;
+    padding: 24px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
+    background-color:  #ffffff;
 } 
 
+.about-main{
+    grid-area: about-main;
+    width: 50vw;
+    padding: 24px 40px;
+    background-color:  #ffffff;
+} 
 .about-content{
     grid-area: about-content;
     width: 50vw;
     background-color: #ffffff;
-    padding: 10px 40px 40px;
-    margin: 120px 40px 20px;
+    padding: 24px 40px;
     align-items: center;
 }
 .about-left-dos{
     grid-area: about-left-dos;
-    margin-left: 5vw;
-    width: 20vw;
+    width: 24vw;
+    height: fit-content;
+    padding: 24px;
     ol{
         list-style: none;
     } 
+    background-color: #ffffff;
 } 
 
 
@@ -485,8 +502,7 @@ footer{
     grid-area: about-content-dos;
     width: 50vw;
     background-color: #ffffff;
-    padding: 10px 40px;
-    margin: 20px 40px;
+    padding: 24px 40px;
     ol {
         list-style: none;
     } 
@@ -637,6 +653,12 @@ table td:first-child {
     li {
         list-style: none;
     } 
+
+    img{
+
+       display:block;
+       margin: 0 auto;
+    } 
 }
 
 .case-study{
@@ -677,11 +699,22 @@ margin: 10vh auto 50px auto;
         justify-content: center;
         margin: 0 10%;
       }
+
+      .scroll-container{
+        overflow: auto;
+        white-space: nowrap;
+        padding: 5px 70px 5px 20px;
+        background: transparent;
+        height: 100%;
+        border-radius:15px;
+      }
+
 /********************** Media Query *********************/
 @media (max-width: 1050px){
     .content{
     grid-template-columns: 1fr 1fr;
     }
+
 }
 @media (max-width: 800px){
     .content{
@@ -702,6 +735,47 @@ margin: 10vh auto 50px auto;
         height: 50vh;
         background: url('../public/img/proyecto_banner.jpg') no-repeat contain;
         }
+
+
+        .about-grid{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            'about-left'
+            'about-main'
+            'about-content'
+            'about-content-dos'
+            'about-left-dos';
+            }
+       
+            .about-left{
+                width: 80vw;
+                margin: 0 auto;
+            } 
+            .about-main{
+                width: 80vw;
+                margin: 0 auto;
+            } 
+            .about-content{
+                width: 80vw;
+                margin: 0 auto;
+            } 
+            .about-left-dos {
+                width: 80vw;
+                margin: 0 auto;
+            } 
+            .about-content-dos {
+                width: 80vw;
+                margin: 0 auto;
+            } 
+            
+            table td:first-child {
+                width: 72vw;
+                }
+             
+             
+           
+    
 }
 
 
@@ -719,39 +793,20 @@ margin: 10vh auto 50px auto;
         display: none !important;
   }
 
-/* ****************** MEDIA ABOUT */
-  .about-grid{
-       grid-template-areas: 
-    'about-left'
-    'about-content'
-    'about-content-dos'
-    'about-left-dos' 
-    }
-    .about-left {
-        width: 60vw;
-        align-items: center;
-        margin: 150PX AUTO 20PX AUTO;
-    }
-    .about-content {
-        width: 65vw;
-        margin: auto;
-    }
-    .about-content-dos {
-        width: 65vw;
-    }
+    /* ****************** MEDIA ABOUT */
 
 
-/* ****************** MEDIA Proyectos */
-.banner-proyecto{
-    margin-top:180px;
-    height:40vh ;
+    /* ****************** MEDIA Proyectos */
+    .banner-proyecto{
+        margin-top:180px;
+        height:40vh ;
 
-    img{
-        height: 100%;
-        width: 150%;
-        background-size: cover;
-        background-position: center;
-    }
+        img{
+            height: 100%;
+            width: 150%;
+            background-size: cover;
+            background-position: center;
+        }
 }
 
 .texto-imagen{
@@ -766,3 +821,26 @@ margin: 10vh auto 50px auto;
     background: #363031;
     color: #fff;
 }
+
+
+/* Scrollbar*/
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $purple-light;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $purple-main;
+    width: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $verde-superblanco;
+    width: 10px;
+  } 

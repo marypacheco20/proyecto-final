@@ -5981,6 +5981,7 @@ textarea.form-control-lg {
 
 .carousel {
   position: relative;
+  margin-top: 60PX;
 }
 
 .carousel.pointer-event {
@@ -5991,9 +5992,7 @@ textarea.form-control-lg {
   position: relative;
   width: 100%;
   overflow: hidden;
-
 }
-
 .carousel-inner::after {
   display: block;
   clear: both;
@@ -6063,13 +6062,13 @@ textarea.form-control-lg {
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
-  height: 80%;
+  width: 5%;
   padding: 0;
-  color: #221d24;
+  color: #fff;
   text-align: center;
   background: none;
   border: 0;
@@ -6085,7 +6084,7 @@ textarea.form-control-lg {
 .carousel-control-prev:hover, .carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
-  color: #221d24;
+  color: #fff;
   text-decoration: none;
   outline: 0;
   opacity: 0.9;
@@ -6134,9 +6133,9 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin-right: 15%;
+  margin-right: 5%;
   margin-bottom: 1rem;
-  margin-left: 15%;
+  margin-left: 5%;
   list-style: none;
 }
 .carousel-indicators [data-bs-target] {
@@ -6149,7 +6148,7 @@ textarea.form-control-lg {
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #221d24;
+  background-color: #fff;
   background-clip: padding-box;
   border: 0;
   border-top: 10px solid transparent;
@@ -6168,12 +6167,18 @@ textarea.form-control-lg {
 
 .carousel-caption {
   position: absolute;
-  top:20vh;
+  top:20%;
   left: 10%;
-  width: 20vw;
-    color: #221d24;;
+  color: #fff;
   text-align: left;
+  width: 25vw;
 }
+@media (max-width: 780px) {
+  .carousel-caption {
+    position: absolute;
+    top:30%;
+  }
+  }
 
 .carousel-dark .carousel-control-prev-icon,
 .carousel-dark .carousel-control-next-icon {
@@ -6185,8 +6190,6 @@ textarea.form-control-lg {
 .carousel-dark .carousel-caption {
   color: #000;
 }
-
-
 
 @-webkit-keyframes spinner-border {
   to {
@@ -6358,47 +6361,6 @@ textarea.form-control-lg {
   transform: none;
 }
 
-.placeholder {
-  display: inline-block;
-  min-height: 1em;
-  vertical-align: middle;
-  cursor: wait;
-  background-color: currentColor;
-  opacity: 0.5;
-}
-.placeholder.btn::before {
-  display: inline-block;
-  content: "";
-}
-
-.placeholder-xs {
-  min-height: 0.6em;
-}
-
-.placeholder-sm {
-  min-height: 0.8em;
-}
-
-.placeholder-lg {
-  min-height: 1.2em;
-}
-
-.placeholder-glow .placeholder {
-  -webkit-animation: placeholder-glow 2s ease-in-out infinite;
-  animation: placeholder-glow 2s ease-in-out infinite;
-}
-
-@-webkit-keyframes placeholder-glow {
-  50% {
-    opacity: 0.2;
-  }
-}
-
-@keyframes placeholder-glow {
-  50% {
-    opacity: 0.2;
-  }
-}
 .placeholder-wave {
   -webkit-mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
   mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
