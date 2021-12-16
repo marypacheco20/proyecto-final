@@ -114,7 +114,28 @@ h2:after {
     text-align: right;
   }
 
-  
+.texto-destacado {
+
+    width: 100%;
+   
+    .comillas{
+        position: absolute;
+        left: 22%;
+        font-family:'eb Garamond', sans-serif;
+        font-size: 18em;
+    }
+      div {
+
+        width: 40vw;
+        position: relative;
+        left: 40%;
+        text-align: right;
+        font-family:'Georgia', serif;
+     font-size: 1.2em;
+         }
+}
+
+
 .logo-nav{
     display: flex;
     justify-content: space-between;
@@ -128,6 +149,8 @@ h2:after {
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+
+
 
 
 
@@ -659,6 +682,14 @@ table td:first-child {
        display:block;
        margin: 0 auto;
     } 
+
+    table{
+margin-top: 2em;
+     } 
+
+    td:first-child {
+        width: 10vw;
+     } 
 }
 
 .case-study{
@@ -709,6 +740,32 @@ margin: 10vh auto 50px auto;
         border-radius:15px;
       }
 
+#no-alinear{
+    display: initial;
+    float:none !important ;
+ 
+  }
+
+.tabla-problema{
+    thead {
+        background-color: $purple-light;
+        font-weight: 600;
+        text-transform: uppercase;
+        td{
+            padding: 10px;
+    
+        }
+    }
+    td:first-child {
+        width: 50%;
+        padding: 0 2em; 
+        }      
+        td{
+            padding: 10px;
+        }
+    
+
+  }
 /********************** Media Query *********************/
 @media (max-width: 1050px){
     .content{
